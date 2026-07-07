@@ -1,8 +1,5 @@
 namespace HW_L3;
 
-using System;
-using System.Collections.Generic;
-
 // Custom room exception
 class RoomFullException : Exception
 {
