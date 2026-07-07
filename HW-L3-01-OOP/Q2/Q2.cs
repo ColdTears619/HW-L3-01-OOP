@@ -1,4 +1,4 @@
-namespace HW_L3;
+namespace HW_L3_Q2;
 
 class Person
 {

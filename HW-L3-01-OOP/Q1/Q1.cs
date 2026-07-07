@@ -40,11 +40,17 @@ class Library
         if (book != null)
         {
             book.IsAvailable = false;
-            Console.WriteLine("Represents one book objectBook borrowed successfully");
+            WriteLine(
+                $"Book borrowed successfully!\n" +
+                $"Title: {book.Title}\n" +
+                $"Author: {book.Author}\n" +
+                $"ISBN: {book.ISBN}\n" +
+                $"Available: {book.IsAvailable}"
+            );
         }
         else
         {
-            Console.WriteLine("Book is not available");
+            WriteLine("Book is not available");
         }
     }
 
@@ -57,7 +63,13 @@ class Library
         if (book != null)
         {
             book.IsAvailable = true;
-            Console.WriteLine("Book returned successfully");
+            WriteLine(
+                $"Book returned successfully!\n" +
+                $"Title: {book.Title}\n" +
+                $"Author: {book.Author}\n" +
+                $"ISBN: {book.ISBN}\n" +
+                $"Available: {book.IsAvailable}"
+            );
         }
     }
 }
@@ -88,6 +100,8 @@ class Question1
 
         // Borrow selected book
         library.BorrowBook("C# Basics");
+
+        WriteLine();
 
         // Return selected book
         library.ReturnBook("C# Basics");
